@@ -590,3 +590,120 @@ write events in js
 4. using events listeners
 
  */
+
+//timing based events
+/*
+setTimeOut - exectute function after waithing for a cetain time
+setInterval - repeat after some times
+clearTimeOut -  
+
+*/
+
+//OOPs in Js
+/*
+object literals- key value pair data structure.
+Store variables and functions together in one container.
+
+"this" -
+*/
+
+let bioDae = {                 //obj litreal
+    myName: 'Abd XyW',
+    myAge: 20,
+    getData: function(){
+        console.log(`my name is ${bioDae.myName} and my age is ${bioDae.myAge}`);
+    }
+}
+bioDae.getData();
+
+//object inside a object
+let bioDa = {                 
+    myName: {
+        realName: 'Abcd',
+        channel: 'unknown'
+    },
+    myAge: 20,
+    getData: function(){
+        console.log(`my name is ${bioDae.myName} and my age is ${bioDae.myAge}`);
+    }
+}
+console.log(bioDa.myName.channel);
+
+
+//this object - it contain the current context
+// console.log(this.alert('Awesome'));
+// function myName() {
+//     console.log(this);
+// }
+// myName();
+const obj = {
+    myAg: 26,
+    myN() {
+        console.log(this.myAg)
+    }
+}
+obj.myN();
+
+let bioD = {
+    myName: {
+        naMe: 'asfjkhdjk',
+        channelN: "125415",
+    },
+    myA: 26,
+    getD() {
+        console.log(`my name is ${this.myName.channelN} and my age is ${this.myA}`);
+    }
+}
+
+bioD.getD();
+
+//Destructuring (array and object)
+const myBioDa = ['adh','safhjka', 26];
+let[myFNma,myLNma, myAges] = myBioDa;
+console.log(myAges);
+
+let[myFNa,myLNa, myAes, myDeg="BSC"] = myBioDa; //add new one
+console.log(myDeg);
+
+//obj destructing
+const myBiodat = {
+    myFm : 'jdahfj',
+    myLN : 'skdjghjkdsgjds',
+    mYage: 26
+}
+// let age = myBiodat.age;
+// let myFm = myBiodat.myFm;
+// console.log(age);
+
+let{ myFm,myLN, mYage, myDege="BSC"} = myBiodat;
+console.log(myFm);
+
+
+//obj properties
+let myNmw = 'abdnm';
+const myB = {
+    [myNmw]: 'dakjfshgfkda a sfka dfh',
+    [20 +6]: 'is my age'
+}
+console.log(myB);
+
+let myHhg = 'sdlglsd sfdgfsd';
+let mydgkjh = 26;
+const mysdgFLJ ={
+    myHhg,
+    mydgkjh
+}
+console.log(mysdgFLJ);
+
+//spread operator(added new data but left commons)
+const colors = ['red', 'green', 'blue'];
+const col = ['green', 'blue', 'violet', 'orange'];
+const myFavColor = [...colors,'yellow','black'];
+console.log(myFavColor);
+
+//array include - check the element is present or not
+const colo = ['red', 'green', 'blue'];
+const isPresent = colo.includes('purple');
+console.log(isPresent);
+
+console.log(2**3);
