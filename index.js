@@ -707,3 +707,116 @@ const isPresent = colo.includes('purple');
 console.log(isPresent);
 
 console.log(2**3);
+
+
+//Advanced Js
+//Event Propagation(Event building and event caption)
+//Event 1st capture and handleed by innermost element and then propagated to outer elements.
+
+//Higher order function and call back
+//calculator
+//callback function(passing itself to the other function)
+const add = (a,b) => {
+    return a + b;
+}
+//callback function(passing itself to the other function)
+const subs = (a,b) => {
+    return Math.abs(a-b);
+}
+//callback function(passing itself to the other function)
+const multi = (a,b) =>{
+    return a*b;
+}
+//Highrt order function can accept other function as an argument
+const calculator = (num1, num2,operator) => {
+ return operator(num1, num2);
+}
+console.log(calculator(5,2,add));
+
+
+
+//how js works and asynchronous programming
+//hoisting
+//Before code exacute, varaibal and functions declearations are moved to the top
+console.log(myP);
+var myP;
+myP = 'agsd';    //undefined
+
+var myP;
+myP = 'agsd'; 
+console.log(myP);   //agsd
+
+//scope chain- resolve the value of the variable
+// const PI = 3.141596;
+
+//Lexical scope- inner functions can access parents function but vise versa is not true
+let ai = "Hello";
+
+const firs = () =>{
+    let b = 'Hi';
+
+    const seco = () => {
+        let c = 'H';
+        console.log(ai+b+c);
+    }
+    seco();
+}
+
+firs();
+
+
+//closer - access outer function from inner function 
+const outerFuncti = (a) => {
+    let b = 10;
+    const innerFu = () => {
+        let sum = a+ b;
+        console.log(`${sum}`);
+    }
+    innerFu();
+}
+outerFuncti(5);
+
+//strict mode
+"use strict"
+x = 'asdjb';
+console.log(x);
+
+//diff between asynchronous and syncronous
+//synchronou, suppose working with 2 project, untill the first program end the second will not start
+const fun2 = () =>{
+    console.log('Hwllo 2');
+}
+const fun1 = () =>{
+    console.log('Hwllo 1');  /*Hwllo 1*/
+    fun2();                  /*Hwllo 2*/
+    console.log('Hwllo 3');  /*Hwllo 3*/
+}
+fun1();
+//asynchronous, shorter duration work done first
+const fun22 = () =>{
+    setTimeout(() => {
+        console.log('Hwllo 2');
+    },2000);
+}
+const fun11 = () =>{
+    console.log('Hwllo 1');  /*Hwllo 1*/
+    fun22();                  /*Hwllo 3*/
+    console.log('Hwllo 3');  /*Hwllo 2*/
+}
+fun11();
+
+//function curring 
+
+function sum(num1) {
+    // console.log(num1);
+    return function(num2){
+        return function(num3){
+            console.log(num1, num2, num3);
+        }
+    }
+}
+
+sum(5)(3)(8);
+
+
+
