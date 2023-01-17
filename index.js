@@ -415,3 +415,178 @@ console.log(su);
 //     return accumulator.concat(currElem);
 // })
 // console.log(flarArr);
+
+//String 
+let myNam = "Abcdfdafdf";
+console.log(myNam.length);
+
+let anySen = "fah terqe kjahrkjhqerh \'s\' fslglsg";
+console.log(anySen);
+
+/*find a string in a string */
+const myBrain = 'I am an technical guy';
+console.log(myBrain.indexOf('am'));
+
+const myBrai = 'I am an technical guy';
+console.log(myBrai.lastIndexOf('t', 5));
+
+const myBio = 'I am an technical guy';
+let sData = myBio.search('am');
+console.log(sData);
+
+//extracting string parts
+/*slice ,substring, substr - 3 processs in there*/
+var str = 'Apple, banana, kiwi, mango';
+// let res = str.slice(0,4);
+let res = str.slice(7, -2);
+console.log(res);
+
+//displaying 280 character 
+let myTweets = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum';
+let myActualTweet = myTweets.slice(0, 280);
+console.log(myActualTweet);
+console.log(myActualTweet.length);
+
+//substring()
+var str = 'Apple,banana, kiwi, mango';
+let ress = str.substring(7, -2);
+console.log(ress);
+
+//substr()
+var str = 'Apple,banana, kiwi, mango';
+let re = str.substring(-4);
+console.log(re);
+
+//replace()
+let myBiodata = 'T am a software eng';
+let replaceData = myBiodata.replace('eng', 'Engineer');
+console.log(replaceData);
+console.log(myBiodata);
+
+//extract string character
+let str1 = 'Hello world';
+console.log(str1.charAt(7));
+
+let str2 = 'Hello world';
+console.log(str2.charCodeAt(7));
+
+let str3 = 'Hello world';
+let lastChar = str3.length - 1;
+console.log(str3.charCodeAt(lastChar));
+
+//property method
+var str4 = 'Hello world';
+console.log(str4[0]);
+console.log(str4.toUpperCase());
+
+//concate method
+
+let firstName = 'Abcd';
+let lastName = 'Xyz';
+
+console.log(firstName + lastName);
+console.log(`${firstName}  ${lastName}`);
+console.log(firstName.concat(lastName));
+console.log(firstName.concat(" " , lastName));
+
+//trim method remove both side white space
+
+var abc = "       Hwllo world";
+console.log(abc.trim());
+
+//string to arrow convert
+
+var txet = 'a,g,b,d,f,g,h,df,sdr,e';
+console.log(txet.split(" , "));
+console.log(txet.split(" "));
+console.log(txet.split("|"));
+
+
+//date and object in js
+let currentDate = new Date();
+console.log(currentDate);
+console.log(new Date());
+console.log(new Date().toLocaleString());
+console.log(new Date().toString());
+console.log(currentDate.getFullYear());
+
+
+console.log(Date.now()); // return miliseconds
+
+var d = new Date(2023, 09, 24, 10, 33,5,10);
+console.log(d.toLocaleString());
+
+var r = new Date("Octaber 13, 2018 11:20:02");
+console.log(r);
+
+var t= new Date(0);
+console.log(t);
+
+let currentDat = new Date();
+console.log(currentDat.setFullYear(2023));
+
+const curTime = new Date();
+console.log(curTime.getTime());
+console.log(currentDat.getHours());
+console.log(currentDat.getMinutes());
+
+let currentTim = new Date();
+console.log(currentTim.setTime(5));
+console.log(currentTim.setMinutes(5));
+console.log(currentTim.setSeconds(5));
+
+
+//Math object in js
+console.log(Math.PI);
+
+let numd = 10.501;
+console.log(Math.round(numd));
+
+console.log(Math.pow(2 , 3));
+console.log(2 ** 3);
+
+console.log(Math.sqrt(25));
+console.log(Math.sqrt(87));
+
+
+console.log(Math.abs(-55));
+console.log(Math.abs(10-55));
+console.log(Math.abs(-51.11));
+
+console.log(Math.ceil(4.51)); //increase number
+console.log(Math.round(99.1)); // show only number before .
+
+console.log(Math.floor(4.7));
+
+console.log(Math.min(22, 100, -11, 01, -1114));
+console.log(Math.max(22, 100, -11, 01, -1114));
+
+console.log(Math.random() * 10 );
+console.log(Math.floor(Math.random() * 10 ));
+
+console.log(Math.trunc(4.6));
+console.log(Math.trunc(-14.6));
+
+//DOM in Js
+/*            
+               window
+                  |
+  document(Dom) - |  -  Js(concept/array/function)
+                (Bom)
+(Navigation/Screen/location/frame/history/HttpRequest)
+
+ */           
+//document.body.style.background = 'red'  
+//window.history.back() - can find the previous visited page
+
+//HTML is the root of your document
+
+//Events in js
+/*
+write events in js
+1.  inline events alert()
+2. calling function
+3.using inline events
+4. using events listeners
+
+ */
