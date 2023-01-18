@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script>
+            const conatiner = document.querySelector('#container');
+
+            const request = new XMLReq();
+            //call api using get methos
+            request.open('GET','https://restcountries.eu/rest/v2/name/nepal' );
+            //send request
+            request.send();
+
+            //to get the response
+            request.addEventListener('load', function(){
+                console.log(this.responseText);
+                const[data] = JSON.parse(this.responseText);
+                const htmlData = ``
+            })
+        </script>
+    </body>
+</html>
